@@ -2154,6 +2154,7 @@ func SchedulerLabels(llmSvc *v1alpha2.LLMInferenceService) map[string]string {
 		constants.KubernetesComponentLabelKey: constants.LLMComponentRouterScheduler,
 		constants.KubernetesAppNameLabelKey:   llmSvc.GetName(),
 		constants.KubernetesPartOfLabelKey:    constants.LLMInferenceServicePartOfValue,
+		"monitoring.opendatahub.io/scrape":    "true",
 	}
 }
 
